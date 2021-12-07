@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    cursor: pointer;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card{
+    overflow-y: scroll;
+    overflow: hidden;
+    box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);
+    -webkit-box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);
+    -moz-box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);
+}
+
+.card::-webkit-scrollbar{
+    display: none;
+}
+
+/* @keyframes Shadow {
+    0% { box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);
+        -webkit-box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);
+        -moz-box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);}
+    25% { box-shadow: 15px 15px 31px 0px rgba(77,138,240,0.23);
+        -webkit-box-shadow: 15px 15px 31px 0px rgba(77,138,240,0.23);
+        -moz-box-shadow: 15px 15px 31px 0px rgba(77,138,240,0.23);}
+    50% { box-shadow: 0px -15px 31px 0px rgba(77,138,240,0.23);
+        -webkit-box-shadow: 0px -15px 31px 0px rgba(77,138,240,0.23);
+        -moz-box-shadow: 0px -15px 31px 0px rgba(77,138,240,0.23);}
+    75% { box-shadow: -15px 0px 31px 0px rgba(77,138,240,0.23);
+        -webkit-box-shadow: -15px 0px 31px 0px rgba(77,138,240,0.23);
+        -moz-box-shadow: -15px 0px 31px 0px rgba(77,138,240,0.23);}
+    100% { box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);
+        -webkit-box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);
+        -moz-box-shadow: 0px 15px 31px 0px rgba(77,138,240,0.23);}
+ } */
+
+ .text{
+     font-size: 18px;
+     color: black;
+     
+ }

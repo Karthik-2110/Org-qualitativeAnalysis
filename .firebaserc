@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "web-lab-823d0": {
+      "hosting": {
+        "Org-qualitativeAnalysis": [
+          "web-lab-823d0"
+        ]
+      }
+    }
+  }
+}
