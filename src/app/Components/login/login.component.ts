@@ -10,24 +10,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
+
   login$!: Observable<any>;
   constructor(
     private readonly authService: AuthService,
     private readonly router : Router) { }
 
   ngOnInit(): void {
-  
+
   }
 
   login() {
     this.login$ =  this.authService
-  .login().pipe(
+  .login()
+  .pipe(
     tap(
       () => this.router.navigateByUrl('/profile')
     )
   );
   }
 
-  
+
 }
