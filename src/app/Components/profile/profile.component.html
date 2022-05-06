@@ -1,39 +1,138 @@
-<div class="container-fluid" *ngIf="user$ | async as user; else loading">
-    <div class="row mx-3">
-        <div class="col-xs-12 heading">
-            <mat-icon fontSet="material-icons-outlined" class="me-2">science</mat-icon>
-                <span class="title">VIRTUAL LAB-ORGANIC QUALITATIVE ANALYSIS</span>
-
-                <span class="ms-auto mt-2">
-                    <img [src]="user.photoURL" class="img img-fluid" style="width: 40px; height: 40px; border-radius: 50%;" [alt]="user.displayName" placement="left" ngbTooltip="{{user.email}}" tooltipClass="my-custom-class">
-                </span>
-        </div>
+<div class="container-fluid global-wrapper" *ngIf="user$ | async as user; else loading">
+  <div class="row">
+    <div class="col-12">
+      <div class="top-bar d-flex justify-content-between">
+        <span>
+          <img src="../../../assets/logo.png" class="img-fluid logo ms-4" alt="Organic qualitative analysis"> <span class="ms-2 app-name">Organic Qualitative Analysis</span>
+        </span>
+        <span class="me-3">
+          <button class="btn btn-logout px-3 py-2" (click)="logout()">Logout</button>
+        </span>
+      </div>
     </div>
+  </div>
 
-    <div class="row mx-3 mt-3 name-wrapper">
-        <div class="col-xs-12">
-            <h1 class="name">
-                Welcome, {{user.displayName}}
-            </h1>
+  <div class="row mt-4">
+    <div class="col-3">
+      <div class="card p-3 ms-3 info-card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 d-flex flex-row align-items-center">
+              <span class="label-output">
+                <img [src]="user.photoURL" class="img img-fluid me-3" style="width: 50px; height: 50px; border-radius: 50%;" [alt]="user.displayName">
+              </span>
+              <span class="d-flex flex-column">
+                <span class="label">{{ user.displayName }}</span>
+                <span class="label-output">{{user.email}}</span>
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
-    <!-- <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <app-droper></app-droper>
+    <div class="col-5">
+      <div class="card p-3 ms-3 abstract-card">
+        <div class="card-body">
+         <div class="row">
+           <p class="Abstract">Abstract</p>
+         </div>
+         <div class="row">
+           <p class="context">
+            This tool assists students in self-evaluation in practical as well as the learning of items through a user-interactive application. After completion, the score will be displayed, each observation will be given one mark, and each confirmatory test will be animated. For the sake of reference, documentation was given.
+           </p>
+         </div>
+         <hr>
+         <div class="row">
+          <p class="Abstract">Note</p>
+         </div>
+         <div class="row notes">
+           <p>This is a representation of educational software.</p>
+           <p>This application is based on the cheminfomatics idea, which provides complete access to all elements in the periodic table as well as their attributes.</p>
+           <p>It included a salt analysis test that allows students to assess themselves.</p>
+           <p>Starting the practical by pressing the start practical button takes you to the next page, where you must choose one of the cards to begin the practical.</p>
+           <p>Each question is worth 5 points, and questions that are answered incorrectly will be penalised.</p>
+         </div>
+         <div class="row periodic-wrapper-btn d-flex flex-row">
+           <div class="card periodic-table p-3 me-3" routerLink="/elementinfo">
+             <div class="card-body d-flex flex-row align-items-center justify-content-between">
+              <div class="periodic-name">Periodic Elements</div> <div class="herf"><img class="img-fluid arrow-icon" src="../../../assets/arrow.svg" alt="arrow"></div>
+             </div>
+           </div>
+           <div class="card pdf p-3">
+            <div class="card-body d-flex flex-row align-items-center justify-content-between">
+              <a class="pdf-title" download="ORGANIC-Salt-analysis.pdf" href="../../../assets/ORGANIC Salt analysis.pdf">Download Procedure</a><img class="img-fluid download-icon" src="../../../assets/download_FILL0_wght400_GRAD0_opsz48.svg" alt="arrow">
+            </div>
+          </div>
+         </div>
         </div>
-    </div> -->
-                            
-                        
-                            <!-- <p>{{user.displayName}}</p> -->
-                        
-                            
-                        
-                            <!-- <button class="btn btn-dark" (click)="logout()">Logut</button> -->
-</div> 
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-3">
+      <div class="card ms-3 element-card">
+        <div class="card-body">
+            <div class="row">
+            <div class="col-12">
+              <div class="card p-3 input-crd">
+                <div class="card-body">
+                  <input type="text" (input)="onSearch($event)" class="form-control p-2" placeholder="Search elements">
+                </div>
+              </div>
+            </div>
+            </div>
+
+          <div class="row">
+            <div class="card data-element">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div *ngIf="elements">
+                      <div class="card mt-2 mb-3 p-3 eachElement" *ngFor="let data of periodicElements">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-12 d-flex flex-row align-items-center justify-content-between">
+                            <div class="d-flex flex-row align-items-center">
+                              <span class="me-3 symbol px-3 py-2"> {{data.symbol}} </span> <span class="elementName"> {{data.name}} </span>
+                            </div>
+                            <div>
+                              <span class="atomicWeight">Atomic no: {{data.atomicNumber}}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div *ngIf="!elements">
+                      <lottie-player src="../../../assets/Ice.json"  background="transparent"  speed="1" loop  autoplay >
+                      </lottie-player>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
+  <div class="row">
+    <div class="col-12">
+      <div class="overlay d-flex flex-column align-items-center">
+        <span>
+          <img src="../../../assets/overlay bar.svg" class="img-fluid overlay-bar" alt="overlay-bar">
+        </span>
+        <span class="mt-4">
+          <button class="btn btn-task" [routerLink]="'/Question'">Start Practical</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

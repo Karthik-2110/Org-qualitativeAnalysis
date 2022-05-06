@@ -9,15 +9,16 @@ import { switchMap } from 'rxjs/operators';
 })
 export class AuthService {
 
+  constructor(private readonly auth: AngularFireAuth) {
+  }
   private user = new BehaviorSubject(this.auth.authState);
   user$: Observable<firebase.User | null> = this.user.pipe(
     switchMap((user) => user)
   ) ;
-  constructor(private readonly auth: AngularFireAuth) {
-  }
   login(): Observable<firebase.auth.UserCredential> {
   return from  (this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()));
   }
+
   logout(): Observable<void> {
   return from  (this.auth.signOut());
   }

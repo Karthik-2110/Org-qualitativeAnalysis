@@ -1,0 +1,62 @@
+<div *ngIf="questionDetails">
+<div class="row">
+  <div class="col-12 d-flex justify-content-center">
+    <p class="group_name">Selected: Group {{ questionDetails?.group_name }}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-10 mx-auto">
+    <p class="procedure_name">Procedure</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-10 mx-auto procedure-card">
+    <p>{{questionDetails?.content[questionIndex].procedure}}</p>
+  </div>
+</div>
+
+<div *ngIf="questionDetails?.content[questionIndex].random === 0">
+  <div class="row mt-5">
+  <div class="col-10 mx-auto answer-card" (click)="onNext()">
+    <p class="ans">{{questionDetails?.content[questionIndex].key.crt0}}</p>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-10 mx-auto answer-card" (click)="onNext1()">
+    <p class="ans">{{questionDetails?.content[questionIndex].key.wrg0}}</p>
+  </div>
+</div>
+</div>
+
+<div *ngIf="questionDetails?.content[questionIndex].random === 1">
+  <div class="row mt-5">
+  <div class="col-10 mx-auto answer-card" (click)="onNext1()">
+    <p class="ans">{{questionDetails?.content[questionIndex].key.wrg0}}</p>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-10 mx-auto answer-card" (click)="onNext()">
+    <p class="ans">{{questionDetails?.content[questionIndex].key.crt0}}</p>
+  </div>
+</div>
+</div>
+
+
+<div class="row bottom-row">
+  <div class="col-10 mx-auto">
+    <div class="d-flex flex-row align-items-center justify-content-between">
+      <div class="points" placement="top" ngbTooltip="Each Question carries 5 Marks">Points: {{points}}</div>
+      <div routerLink="/profile" class="return-btn" placement="top" ngbTooltip="If you return back to home your score will get Reset">Return Home</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div *ngIf="!questionDetails">
+  <lottie-player src="../../../assets/Ice.json"  background="transparent" style="height: 400px; width: auto;"  speed="1" loop  autoplay >
+  </lottie-player>
+</div>

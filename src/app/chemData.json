@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "compoundName": "Bromination",
+        "Confirmation": "A small amount of substance taken into test tube and add bromine water shake well. Select the following observation and inference"
+    },
+    {
+        "id": 2,
+        "compoundName": "Test for Acids",
+        "Confirmation": "Esterifiction: 0.1 g (3dp.) sub. +1 ml rectified sprit + 5 dp. conc. H2So4. Shake well and warm gently. pour the hot mixture into 10ml dilute Na2Co3 solution.",
+        "crtAns": [{
+          "Ans": "Pleasent odour : Due to formation of an ester - indicates an Organic acid.",
+          "status": "true"
+        }]
+    },
+    {
+        "id": 3,
+        "compoundName": "Test for Phenol",
+        "Confirmation": "Neutral Ferric Chloride test : 0.1 g 3dp sub. +5dp .neutral ferric chloride solution.apprearance of blue ,violet or green color indicates Phenol. The color is due to complex formation between ferric ion and phenol (substituted phenol)"
+    },
+    {
+        "id": 4,
+        "compoundName": "Test for Ester",
+        "Confirmation": "Test with Phenolphthalein: 0.2g sub + 2 dp. Phenolphthalein + 3 dp NaOH solution. Heat. pink colour disappers on heating ; indicates an ester. <br> Initially the free NaOH gives pink color with the indicator. On heating, NaOH is used for Alkaline hydrolysis of ester. Hence, free indicator (Colourless) is liberated."
+    },
+    {
+        "id": 5,
+        "compoundName": "Test for Carbohydrates",
+        "Confirmation": "Molisch's test : 0.1 g sub. in 3 ml ethyl alcohol, add 1 ml conc. Hcl. Cool (in tap or ice), add 1 ml NaNO2 solution. Add 3 ml ether, shake well and seperate ether layer and evaporate it carefully. Add 5 dp. phenol to the residue. Warm, cool and 5 drop conc. sulphuric acid. Pour the product into 20 ml of dilute NaOH solution. First a red and then a blue solution indicates the secondary amine"
+    },
+    {
+        "id": 6,
+        "compoundName": "Test for Alcohol",
+        "Confirmation": "Test with Phenolphthalein: 0.2g sub + 2 dp. Phenolphthalein + 3 dp NaOH solution. Heat. pink colour disappers on heating ; indicates an ester. <br> Initially the free NaOH gives pink color with the indicator. On heating, NaOH is used for Alkaline hydrolysis of ester. Hence, free indicator (Colourless) is liberated."
+    }
+]

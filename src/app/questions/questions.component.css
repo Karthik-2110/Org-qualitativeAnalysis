@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+.app-name {
+  color: #519eeb;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.global-wrapper {
+  background-color: #f7f8fc;
+  height: 100vh;
+  position: relative !important;
+}
+
+.top-bar {
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 35px;
+  width: auto;
+}
+
+.overlay {
+  position: absolute;
+  background: #ffffff;
+  box-shadow: 0px -7px 40px rgb(110 110 110 / 13%);
+  border-radius: 50px 50px 0px 0px;
+  width: 100%;
+  height: 130px;
+  bottom: 0;
+}
+
+.overlay-bar {
+  height: 4px;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.btn-task {
+  background: #57CC99;
+  box-shadow: 0px 6px 15px rgba(38, 38, 38, 0.2);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  width: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 50px;
+  transition: all 500ms;
+}
+
+.btn-logout {
+  background-color: #eefffb;
+  border: 1px solid #38b896;
+  color: #38b896;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.btn-task:hover {
+  margin-top: -2px;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e2e6f2;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.info-card_title {
+  color: #474b6d;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.label {
+  color: #474b6d;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.label-output {
+  color: #8d90aa;
+  font-size: 12px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+}
+
+.element-card {
+  height: 18rem;
+  overflow: hidden;
+  background-color: transparent;
+  border: transparent;
+  height: 20rem;
+}
+
+.data-element {
+  overflow-y: scroll;
+  background-color: transparent;
+  border: transparent;
+  height: 16rem;
+}
+
+.data-element::-webkit-scrollbar {
+  display: none;
+}
+
+.input-crd {
+  background-color: #fff;
+  border: none;
+}
+
+input {
+  border: 1px solid #8d90aa !important;
+  box-shadow: none !important;
+  padding-left: 18px !important;
+  caret-color: #519eeb !important;
+  color: #474b6d !important;
+}
+
+.symbol {
+  background-color: #edf6ff;
+  border-radius: 5px;
+  color: #519eeb;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.eachElement {
+  border: none;
+  border-radius: 10px;
+}
+
+.elementName {
+  color: #474b6d;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.atomicWeight {
+  color: #8d90aa;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Abstract {
+  color: #474b6d;
+  font-size: 20px;
+  margin-top: 7px;
+  font-weight: 500;
+}
+
+.context {
+  color: #8d90aa;
+}
+
+.abstract-card {
+  position: absolute;
+  width: 60%;
+  background-color: transparent;
+  border: none;
+}
+
+.group_A{
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 600;
+  height: 250px;
+  width: 200px;
+  border: none;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.04);
+  color: orange;
+  background-color: rgb(252, 243, 228);
+  border: 1px solid orange;
+  transition: all 500ms;
+}
+
+.group_B{
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 600;
+  height: 250px;
+  width: 200px;
+  border: none;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.04);
+  color: #B8405E;
+  background-color: #ffecf1;
+  border: 1px solid #B8405E;
+  transition: all 500ms;
+}
+
+.group_C{
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 600;
+  height: 250px;
+  width: 200px;
+  border: none;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.04);
+  color: #4FD3C4;
+  border: 1px solid #4FD3C4;
+  background-color: #e6fffc;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+}
+
+.group_D{
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 600;
+  height: 250px;
+  width: 200px;
+  border: none;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.04);
+  color: #534fd3;
+  border: 1px solid #534fd3;
+  background-color: #f2f1ff;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+}
+
+.group_A:hover{
+  margin-top: -20px;
+}
+
+.group_B:hover{
+  margin-top: -20px;
+}
+
+.group_C:hover{
+  margin-top: -20px;
+}
+
+.group_D:hover{
+  margin-top: -20px;
+}

@@ -1,0 +1,55 @@
+<div class="container-fluid global-wrapper">
+  <div class="row">
+    <div class="col-12">
+      <div class="top-bar d-flex justify-content-between">
+        <span>
+          <img src="../../../assets/logo.png" class="img-fluid logo ms-4" alt="Organic qualitative analysis"> <span class="ms-2 app-name">Organic Qualitative Analysis</span>
+        </span>
+        <span class="me-3">
+          <button class="btn btn-logout px-3 py-2" routerLink="/profile">Back</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12" *ngIf="question">
+      <div class="d-flex flex-row align-items-center justify-content-center">
+        <div class="card p-3 components-group mx-4" *ngFor="let data of question; let i = index"
+        [ngClass]="{'group_A': data.group_name === 'A',
+                    'group_B': data.group_name === 'B',
+                    'group_C': data.group_name === 'C',
+                    'group_D': data.group_name === 'D'}" (click)="onselectProduct(i)">
+          <div class="card-body d-flex flex-row align-items-center justify-content-center">
+            <p> {{ data.group_name }} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!question">
+      <lottie-player src="../../../assets/Ice.json"  background="transparent" style="height: 400px; width: auto;"  speed="1" loop  autoplay >
+      </lottie-player>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="overlay d-flex flex-column align-items-center">
+        <span>
+          <img src="../../../assets/overlay bar.svg" class="img-fluid overlay-bar" alt="overlay-bar">
+        </span>
+        <span class="mt-4">
+          <button class="btn btn-task">Choose a card to start test</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

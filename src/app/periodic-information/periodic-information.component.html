@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="back" routerLink="/profile">
+    <img src="../../assets/keyboard_arrow_left_FILL0_wght400_GRAD0_opsz48.svg" class="arrow" style="height:40px; width: 40px;" alt="arrow">
+  </div>
+  <div class="col-12 d-flex justify-content-center">
+    <div class="input-wrapper">
+      <input type="text" (input)="onSearch($event)" class="form-control p-2 cstm-input" placeholder="Search elements Name">
+    </div>
+  </div>
+
+  </div>
+<div class="accordian-wrapper">
+    <div *ngIf="periodicElements">
+      <ngb-accordion #acc="ngbAccordion" *ngFor="let data of periodicElements"> 
+        <ngb-panel id="toggle-1" title="{{data.name}}">
+          <ng-template ngbPanelContent>
+            <div class="row">
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Atomic mass:</div><div class="data_res">{{data.atomicMass}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Atomic number:</div><div class="data_res">{{data.atomicNumber}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Atomic radius:</div><div class="data_res">{{data.atomicRadius}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Block:</div><div class="data_res">{{data.block}}</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Boiling point:</div><div class="data_res">{{data.boilingPoint}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Bonding type:</div><div class="data_res">{{data.bondingType}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">CPK HexColor:</div><div class="data_res">{{data.cpkHexColor}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Density:</div><div class="data_res">{{data.density}}</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Electron affinity:</div><div class="data_res">{{data.electronAffinity}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Electro negativity:</div><div class="data_res">{{data.electronegativity}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">configuration:</div><div class="data_res">{{data.electronicConfiguration}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Group:</div><div class="data_res">{{data.group}}</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Group block:</div><div class="data_res">{{data.groupBlock}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Ion radius:</div><div class="data_res">{{data.ionRadius}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Ionization energy:</div><div class="data_res">{{data.ionizationEnergy}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Melting point:</div><div class="data_res">{{data.meltingPoint}}</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Oxidation states:</div><div class="data_res">{{data.oxidationStates}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Period:</div><div class="data_res">{{data.period}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Standard state:</div><div class="data_res">{{data.standardState}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Symbol:</div><div class="data_res">{{data.symbol}}</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">VanDerWaals radius:</div><div class="data_res">{{data.vanDerWaalsRadius}}</div>
+              </div>
+              <div class="col-3 d-flex flex-row">
+                <div class="label me-1">Year discovered:</div><div class="data_res">{{data.yearDiscovered}}</div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+    <div *ngIf="!periodicElements">
+      <lottie-player src="../../../assets/Ice.json"  background="transparent" style="height: 400px; width: auto;"  speed="1" loop  autoplay >
+      </lottie-player>
+    </div>
+</div>
